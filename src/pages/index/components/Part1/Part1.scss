@@ -1,0 +1,25 @@
+.part1-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  video {
+    object-fit:fill;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    z-index: -1;
+  }
+  .slg {
+    font-size: 0;
+    background: url(https://game.gtimg.cn/images/game/web202112/img/p1-slg.fd94e03.png)
+      no-repeat 50%/100%;
+    width: 1273px;
+    height: 552px;
+    margin: 100px auto 0;
+    z-index: 1;
+  }
+}

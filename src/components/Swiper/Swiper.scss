@@ -1,0 +1,97 @@
+.swiper-wrap {
+  // position: relative;
+  overflow: hidden;
+  .swiper-content {
+    width: 100vw;
+    height: 100vh;
+    transition: all 300ms ease-in-out;
+  }
+  .indicator-wrap {
+    position: absolute;
+    top: 50%;
+    right: 88px;
+    width: 30px;
+    height: 240px;
+    transform: translateY(-50%);
+    z-index: 10;
+    .indicator-item {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-clip: content-box;
+      background-color: #fff;
+      padding: 6px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 3px solid transparent;
+      opacity: 1;
+      margin: 15px 0;
+      transition: all 300ms ease-in-out;
+    }
+    .selected-item {
+      border: 2px solid #fff;
+    }
+  }
+  @keyframes next-animation {
+    0% {
+      bottom: 26px;
+    }
+    10% {
+      bottom: 28px;
+    }
+    20% {
+      bottom: 30px;
+    }
+    30% {
+      bottom: 32px;
+    }
+    40% {
+      bottom: 34px;
+    }
+    50% {
+      bottom: 36px;
+    }
+    60% {
+      bottom: 34px;
+    }
+    70% {
+      bottom: 32px;
+    }
+    80% {
+      bottom: 30px;
+    }
+    90% {
+      bottom: 28px;
+    }
+    100% {
+      bottom: 26px;
+    }
+  }
+  .next {
+    width: 10.5px;
+    height: 17px;
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    right: 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAgCAMAAAAlvKiEAAAAY1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+aRQ2gAAAAIHRSTlMA+RsQbc+17+JIuVYhFOrAsJFfpp2aZE/m2HZDOS4LCGfSTr4AAADCSURBVCjPzc5pEoMgDIbhLxBEQdyX7s39T9mprVXwAn3/kHmGzASfFA+uGVlhS/VEpm8MUf/jwlas34PmyhZfI7fQwo4WVdZhl7MKwFDpPepqAAIxopgCJtIxapowGiSZEVmW2FuaIzZozymeW3gpYyvF42HbGFv7AC5039udLgCeJlebqdw8P+/putr1tP5QtWSzBsKcSb1tdUbEkojp4kM881ziv7rdjlaL1Kl5KQrxCXakSuoS1DlRrpEUeArr/AI2+wf5pCXLpgAAAABJRU5ErkJggg==)
+      no-repeat 50%/100%;
+    margin: 0 auto;
+    -webkit-animation: next-animation 1.5s infinite;
+    animation: next-animation 1.5s infinite;
+    z-index: 10;
+  }
+  .hide {
+    display: none;
+  }
+  .reset {
+    width: 72px;
+    position: absolute;
+    bottom: 26px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    color: whitesmoke;
+  }
+}
