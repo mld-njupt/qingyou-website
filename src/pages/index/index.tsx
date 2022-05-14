@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../components/Header/Header";
 import Swiper from "../../components/Swiper/Swiper";
 import Part1 from "./components/Part1/Part1";
@@ -7,9 +6,11 @@ import Part3 from "./components/Part3/Part3";
 import Part4 from "./components/Part4/Part4";
 import MobilePart1 from "./components/Part1/MobilePart1";
 import browser from "../../utils/browser";
+
 function Index() {
   const equipmentType = browser();
   const { isMobile } = equipmentType.version;
+  
   return (
     <>
       {isMobile ? null : <Header isTransparent={true}></Header>}
