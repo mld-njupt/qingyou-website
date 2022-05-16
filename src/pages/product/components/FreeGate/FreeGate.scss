@@ -1,0 +1,32 @@
+.free-gate-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .free-gate-msg {
+    margin: 120px 0px 0px 77px;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 521px;
+    .free-gate-icon {
+      width: 80px;
+      height: 80px;
+      background-image: url("https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .free-gate-title {
+      width: 100%;
+      margin-top: 32px;
+      font-size: 36px;
+      height: 32px;
+      line-height: 32px;
+    }
+    .free-gate-detail {
+      width: 100%;
+      margin-top: 24px;
+      height: 314px;
+    }
+  }
+}
