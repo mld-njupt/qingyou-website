@@ -56,7 +56,7 @@ function Product(props: ProductProp) {
   const { isMobile } = props;
   return (
     <>
-      {isMobile ? null : <Header isTransparent={true}></Header>}
+      {/* {isMobile ? null : <Header isTransparent={true}></Header>} */}
       {isMobile ? (
         <Swiper isMobile={true}>
           {/* <FreeGate></FreeGate>

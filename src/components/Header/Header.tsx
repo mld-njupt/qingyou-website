@@ -33,7 +33,14 @@ function Header(props: HeaderProp) {
           了解我们
         </div>
         <div className="banner-item">加入我们</div>
-        <div className="banner-item">产品详情</div>
+        <div
+          className="banner-item"
+          onClick={() => {
+            navigateTo("product");
+          }}
+        >
+          产品详情
+        </div>
         <div className="banner-item">青柚人</div>
         <div className="banner-item">青柚博客</div>
       </div>
