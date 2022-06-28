@@ -11,7 +11,7 @@
     top: 50%;
     right: 88px;
     width: 30px;
-    height: 240px;
+    // height: 240px;
     transform: translateY(-50%);
     z-index: 10;
     .indicator-item {
@@ -27,9 +27,31 @@
       opacity: 1;
       margin: 15px 0;
       transition: all 300ms ease-in-out;
+      cursor: pointer;
     }
     .selected-item {
       border: 2px solid #fff;
+    }
+    .product-indicator-item {
+      width: 4vh;
+      height: 4vh;
+      min-width: 30px;
+      min-height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 24px 0;
+    }
+    .product-selected-item {
+      box-shadow: 0 9px 18px 0 rgb(0 0 0 / 15%);
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
     }
   }
   @keyframes next-animation {

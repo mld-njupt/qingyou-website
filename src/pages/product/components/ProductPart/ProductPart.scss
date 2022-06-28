@@ -1,0 +1,44 @@
+.product-part-wrap {
+  width: 100vw;
+  height: 100vh;
+  // background-image: url("https://p9-bd-official.byteimg.com/img/bytedance-cn/dd665e447cd09c339875f9580a5478bd~noop.image");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .product-part-msg {
+    margin: 120px 0px 0px 82px;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 521px;
+    .product-part-icon {
+      width: 60px;
+      height: 60px;
+      // background-image: url("https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .product-part-title {
+      width: 100%;
+      margin-top: 32px;
+      font-size: 36px;
+      height: 32px;
+      line-height: 32px;
+      font-family: "Gilroy-Bold", -apple-system, "Sofia Pro", "Microsoft YaHei",
+        "Helvetica", "Arial", sans-serif;
+      font-weight: 700;
+    }
+    .product-part-detail {
+      font-family: "Gilroy-Bold", -apple-system, "Sofia Pro", "Microsoft YaHei",
+        "Helvetica", "Arial", sans-serif;
+      width: 100%;
+      margin-top: 24px;
+      height: 314px;
+      font-size: 16px;
+      white-space: pre-wrap;
+      line-height: 2;
+    }
+  }
+}

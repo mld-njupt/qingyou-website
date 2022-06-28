@@ -26,13 +26,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 400px;
+    // width: 400px;
     height: 23px;
     color: white;
     .banner-item {
       height: 23px;
       line-height: 23px;
-      margin: 0 28px;
+      margin: 0 14px;
+    }
+    *:hover {
+      cursor: pointer;
     }
   }
 }

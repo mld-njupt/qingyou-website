@@ -13,6 +13,8 @@ interface ContextProp {
   setSelectedIndex: Function;
 }
 interface SwiperProp {
+  //用来配置不同样式的指示器
+  productIndicatorOptions?: Array<{ iconUrl: string }>;
   isMobile?: boolean;
   children: ReactElement | Array<ReactElement>;
 }
@@ -20,12 +22,25 @@ const swiperContext = React.createContext<ContextProp>({
   selectedIndex: 0,
   setSelectedIndex: () => {},
 });
-function IndicatorItem(props: { onClick: Function; selected: boolean }) {
-  const { onClick, selected } = props;
+function IndicatorItem(props: {
+  onClick: Function;
+  selected: boolean;
+  bg?: string;
+}) {
+  const { onClick, selected, bg } = props;
   return (
     <div
       onClick={onClick as MouseEventHandler<HTMLDivElement>}
-      className={selected ? "indicator-item selected-item" : "indicator-item"}
+      className={
+        bg
+          ? selected
+            ? "product-indicator-item  product-selected-item"
+            : "product-indicator-item"
+          : selected
+          ? "indicator-item selected-item"
+          : "indicator-item"
+      }
+      style={{ backgroundImage: `url(${bg})` }}
     ></div>
   );
 }
@@ -54,7 +69,7 @@ function MobileIndicator(props: {
   );
 }
 function Swiper(props: SwiperProp) {
-  const { children, isMobile } = props;
+  const { children, isMobile, productIndicatorOptions } = props;
   const [selectedIndex, setSelectedIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsCount = React.Children.count(children);
@@ -161,6 +176,10 @@ function Swiper(props: SwiperProp) {
                     setSelectedIndex(index);
                   }}
                   selected={index === context.selectedIndex}
+                  bg={
+                    productIndicatorOptions &&
+                    productIndicatorOptions[index].iconUrl
+                  }
                 ></IndicatorItem>
               );
             })}

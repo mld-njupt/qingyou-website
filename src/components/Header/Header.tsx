@@ -1,11 +1,15 @@
-import React from "react";
-import "./Header.scss"
+import "./Header.scss";
+import { useNavigate } from "react-router-dom";
+
 interface HeaderProp {
   isTransparent?: boolean;
   bgColor?: string;
 }
+
 function Header(props: HeaderProp) {
   const { isTransparent, bgColor } = props;
+  const navigateTo = useNavigate();
+
   return (
     <div
       style={
@@ -19,9 +23,26 @@ function Header(props: HeaderProp) {
     >
       <div className="header-icon"></div>
       <div className="header-banner">
-        <div className="banner-item">关于我们</div>
-        <div className="banner-item">游戏介绍</div>
-        <div className="banner-item">品牌活动</div>
+        <div className="banner-item">首页</div>
+        <div
+          className="banner-item"
+          onClick={() => {
+            navigateTo("about");
+          }}
+        >
+          了解我们
+        </div>
+        <div className="banner-item">加入我们</div>
+        <div
+          className="banner-item"
+          onClick={() => {
+            navigateTo("product");
+          }}
+        >
+          产品详情
+        </div>
+        <div className="banner-item">青柚人</div>
+        <div className="banner-item">青柚博客</div>
       </div>
     </div>
   );
