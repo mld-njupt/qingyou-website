@@ -4,19 +4,18 @@ import Product from "./pages/product";
 import Index from "./pages/index";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
-import browser from "./utils/browser";
+import { useWindowSize } from "react-use";
 
 
 function App() {
-  const equipmentType = browser();
-  const { isMobile } = equipmentType.version;
+  const {width, height} = useWindowSize();
   return (
     <Routes>
       <Route path="/" element={<Home/>}>
-        <Route index  element={<Index isMobile={isMobile} />} />
-        <Route path="index"  element={<Index isMobile={isMobile} />} />
+        <Route index  element={<Index isMobile={width/height>1?false:true} />} />
+        <Route path="index"  element={<Index isMobile={width/height>1?false:true} />} />
         <Route path="about" element={<About />} />
-        <Route path="product" element={<Product isMobile={isMobile} />} />
+        <Route path="product" element={<Product isMobile={width/height>1?false:true} />} />
       </Route>
     </Routes>
   );
