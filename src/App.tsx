@@ -11,7 +11,7 @@ function App() {
   const {width, height} = useWindowSize();
   return (
     <Routes>
-      <Route path="/" element={<Home/>}>
+      <Route path="/" element={<Home isMobile={width/height>1?false:true} />}>
         <Route index  element={<Index isMobile={width/height>1?false:true} />} />
         <Route path="index"  element={<Index isMobile={width/height>1?false:true} />} />
         <Route path="about" element={<About />} />

@@ -30,7 +30,7 @@ function Header(props: HeaderProp) {
             navigateTo("about");
           }}
         >
-          了解我们
+          关于我们
         </div>
         <div className="banner-item">加入我们</div>
         <div
