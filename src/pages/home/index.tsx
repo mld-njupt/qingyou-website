@@ -1,10 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../../components/Header/Header";
-function Home() {
+import MobileHeader from "../../components/Header/MobileHeader";
+interface HomeProp{
+  isMobile:boolean
+}
+function Home(props:HomeProp) {
   return (
     <div className="home-wrap">
-      <Header></Header>
+      {props.isMobile?<MobileHeader></MobileHeader>:<Header></Header>}
       <div
         style={{
           width: "100vw",
