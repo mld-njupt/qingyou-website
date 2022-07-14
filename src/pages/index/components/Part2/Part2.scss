@@ -1,5 +1,114 @@
-.part2-wrap{
+.part2-wrap {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://game.gtimg.cn/images/game/web202112/img/bg.6a07257.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  .content-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    background-color: cadetblue;
+    margin: 50px auto;
+    .title-wrap {
+      width: 1209px;
+      color: white;
+      margin: 100px auto 0;
+      p {
+        font-size: 40px;
+        font-style: oblique;
+        letter-spacing: 2px;
+      }
+      .title {
+        text-align: left;
+        font-size: 18px;
+        letter-spacing: 9px;
+      }
+    }
+    .carousel-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 60px auto 0;
+      overflow-x: hidden;
+      width: 1400px;
+      .carousel-content {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 60vh;
+        // overflow: hidden;
+        transition: all 300ms ease-in-out;
+        .carousel-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          overflow: hidden;
+          margin: 0 10px;
+          width: 33.5vh;
+          height: 59.5vh;
+          .item-image {
+            width: 30.3vh;
+            height: 55.8vh;
+            filter: brightness(50%);
+            transition: all 100ms ease-in-out;
+          }
+          //权重最高所以放在最下面
+          .item-image-active {
+            width: 100%;
+            height: 100%;
+            filter: brightness(100%);
+          }
+        }
+        .carousel-item2 ,.carousel-item7,.carousel-item12{
+          width: 92.8vh;
+          height: 59.5vh;
+          .item-image2,.item-image7,.item-image12 {
+            width: 89.5vh;
+            height: 55.8vh;
+          }
+          //权重最高所以放在最下面
+          .item-image-active {
+            width: 100%;
+            height: 100%;
+            filter: brightness(100%);
+          }
+        }
+      }
+      .carousel-pagination-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 122px;
+        height: 33px;
+        margin: 20px auto 0;
+        color: white;
+       
+        .carousel-pagination-next {
+          width: 15px;
+          height: 23px;
+          background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVBAMAAACAghKHAAAAG1BMVEUAAAD/nnT/nnT/nnT/nnT/nnT/nnT/nnT/nnTnP+dTAAAACHRSTlMAlPSKiInr0spr1LYAAAAwSURBVAjXYzAKYAABjUYwZdEhAKIYOyBcCeK4LWBuRRuUB5WDqMTNgdmHsN0J7BYAADARe9OV1NsAAAAASUVORK5CYII=");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+        .carousel-pagination-back {
+          transform: rotateY(180deg);
+          width: 15px;
+          height: 23px;
+          background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVBAMAAACAghKHAAAAG1BMVEUAAAD/nnT/nnT/nnT/nnT/nnT/nnT/nnT/nnTnP+dTAAAACHRSTlMAlPSKiInr0spr1LYAAAAwSURBVAjXYzAKYAABjUYwZdEhAKIYOyBcCeK4LWBuRRuUB5WDqMTNgdmHsN0J7BYAADARe9OV1NsAAAAASUVORK5CYII=");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+        .carousel-pagination{
+          width: 38px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
 }

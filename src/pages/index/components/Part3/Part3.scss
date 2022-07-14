@@ -1,5 +1,8 @@
 .part3-wrap {
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 200vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgb(95, 160, 104);
 }
