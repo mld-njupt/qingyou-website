@@ -12,8 +12,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home isMobile={width/height>0.8?false:true} />}>
-        <Route index  element={<Index isMobile={width/height>0.8?false:true} />} />
-        <Route path="index"  element={<Index isMobile={width/height>0.8?false:true} />} />
+        <Route index  element={<Index isMobile={width/height>0.8?false:true} width={width} />} />
+        <Route path="index"  element={<Index isMobile={width/height>0.8?false:true}  width={width} />} />
         <Route path="about" element={<About />} />
         <Route path="product" element={<Product isMobile={width/height>0.8?false:true} />} />
       </Route>
