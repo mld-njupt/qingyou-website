@@ -1,6 +1,6 @@
 .part2-wrap {
   position: absolute;
-  top: 100vh;
+  top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -14,13 +14,14 @@
     width: 100vw;
     margin: 50px auto;
     .title-wrap {
-      width: 1209px;
+      width: 141.6vh;
       color: white;
       margin: 100px auto 0;
       p {
         font-size: 40px;
         font-style: oblique;
         letter-spacing: 2px;
+        margin: 0;
       }
       .title {
         text-align: left;
@@ -34,12 +35,12 @@
       align-items: center;
       margin: 60px auto 0;
       overflow-x: hidden;
-      width: 1380px;
+      width: 162vh;
       .carousel-content {
         width: 100%;
         display: flex;
         flex-wrap: nowrap;
-        height: 60vh;
+        height: 60.7vh;
         // overflow: hidden;
         transition: all 300ms ease-in-out;
         .carousel-item {
@@ -49,11 +50,11 @@
           flex-shrink: 0;
           overflow: hidden;
           margin: 0 10px;
-          width: 33.5vh;
-          height: 59.5vh;
+          width: 33vh;
+          height: 59.9vh;
           .item-image {
-            width: 30.3vh;
-            height: 55.8vh;
+            width: 31.6vh;
+            height: 56.1vh;
             filter: brightness(50%);
             transition: all 100ms ease-in-out;
           }
@@ -64,12 +65,16 @@
             filter: brightness(100%);
           }
         }
-        .carousel-item2 ,.carousel-item7,.carousel-item12{
-          width: 92.8vh;
-          height: 59.5vh;
-          .item-image2,.item-image7,.item-image12 {
-            width: 89.5vh;
-            height: 55.8vh;
+        .carousel-item2,
+        .carousel-item7,
+        .carousel-item12 {
+          width: 106vh;
+          height: 59.9vh;
+          .item-image2,
+          .item-image7,
+          .item-image12 {
+            width: 99.8vh;
+            height: 56.1vh;
           }
           //权重最高所以放在最下面
           .item-image-active {
@@ -85,13 +90,13 @@
         justify-content: space-between;
         width: 122px;
         height: 33px;
-        margin: 20px auto 0;
+        // margin: 20px auto 0;
         color: white;
-       
+
         .carousel-pagination-next {
           width: 15px;
           height: 23px;
-          background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVBAMAAACAghKHAAAAG1BMVEUAAAD/nnT/nnT/nnT/nnT/nnT/nnT/nnT/nnTnP+dTAAAACHRSTlMAlPSKiInr0spr1LYAAAAwSURBVAjXYzAKYAABjUYwZdEhAKIYOyBcCeK4LWBuRRuUB5WDqMTNgdmHsN0J7BYAADARe9OV1NsAAAAASUVORK5CYII=");
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVBAMAAACAghKHAAAAG1BMVEUAAAD/nnT/nnT/nnT/nnT/nnT/nnT/nnT/nnTnP+dTAAAACHRSTlMAlPSKiInr0spr1LYAAAAwSURBVAjXYzAKYAABjUYwZdEhAKIYOyBcCeK4LWBuRRuUB5WDqMTNgdmHsN0J7BYAADARe9OV1NsAAAAASUVORK5CYII=");
           background-repeat: no-repeat;
           background-size: 100% 100%;
         }
@@ -99,11 +104,11 @@
           transform: rotateY(180deg);
           width: 15px;
           height: 23px;
-          background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVBAMAAACAghKHAAAAG1BMVEUAAAD/nnT/nnT/nnT/nnT/nnT/nnT/nnT/nnTnP+dTAAAACHRSTlMAlPSKiInr0spr1LYAAAAwSURBVAjXYzAKYAABjUYwZdEhAKIYOyBcCeK4LWBuRRuUB5WDqMTNgdmHsN0J7BYAADARe9OV1NsAAAAASUVORK5CYII=");
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAVBAMAAACAghKHAAAAG1BMVEUAAAD/nnT/nnT/nnT/nnT/nnT/nnT/nnT/nnTnP+dTAAAACHRSTlMAlPSKiInr0spr1LYAAAAwSURBVAjXYzAKYAABjUYwZdEhAKIYOyBcCeK4LWBuRRuUB5WDqMTNgdmHsN0J7BYAADARe9OV1NsAAAAASUVORK5CYII=");
           background-repeat: no-repeat;
           background-size: 100% 100%;
         }
-        .carousel-pagination{
+        .carousel-pagination {
           width: 38px;
           display: flex;
           justify-content: space-between;

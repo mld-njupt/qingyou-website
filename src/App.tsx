@@ -5,6 +5,7 @@ import Index from "./pages/index";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import { useWindowSize } from "react-use";
+import 'antd/dist/antd.css';
 
 
 function App() {
