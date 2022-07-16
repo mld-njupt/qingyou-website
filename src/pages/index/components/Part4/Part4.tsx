@@ -1,13 +1,7 @@
 import React from "react";
 import { Carousel } from "antd";
 import "./Part4.scss";
-const contentStyle: React.CSSProperties = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+
 const assets = [
   "https://shp.qpic.cn/cfwebcap/0/1d1fcb1d8ec5927fd7e35617fd277649/0/?width=640&height=363",
   "https://shp.qpic.cn/cfwebcap/0/164c5cd4ecf14f2b9451667668cdce3d/0/?width=640&height=363",
@@ -26,7 +20,7 @@ const newsList = [
 ];
 function Part4() {
   return (
-    <div className="part4-wrap">
+    <div className="part4-wrap container">
       <div className="content-wrap">
         <div className="title-wrap">
           <p>青柚事</p>
@@ -41,8 +35,8 @@ function Part4() {
                     key={index}
                     src={url}
                     alt=""
-                    width={"100%"}
-                    height={"100%"}
+                    // width={"100%"}
+                    // height={"100%"}
                   />
                 );
               })}

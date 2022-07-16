@@ -57,7 +57,7 @@ function Part2() {
     console.log(index);
   }, [index]);
   return (
-    <div className="part2-wrap">
+    <div className="part2-wrap container">
       <div className="content-wrap">
         <div className="title-wrap">
           <p>青柚产品</p>
