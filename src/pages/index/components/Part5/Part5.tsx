@@ -40,7 +40,7 @@ function Part5() {
     };
   };
   return (
-    <div className="part5-wrap">
+    <div className="part5-wrap container">
       <div className="content-wrap">
         <div className="title-wrap">
           <p>加入我们</p>
