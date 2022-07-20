@@ -2,53 +2,26 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Swiper from "../../components/Swiper/Swiper";
 import ProductPart from "./components/ProductPart/ProductPart";
+
+import youkexingBackground from '../../assets/products/background/youkexing.png'
+import youkexingCode from '../../assets/products/code/youkexing.png'
+import youkexingIcon from '../../assets/products/icon/youkexing.png'
+import youkexingMock from '../../assets/products/mock/youkexing.png'
+
 const products = [
   {
     iconUrl:
-      "https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image",
-    title: "今日头条",
+      youkexingIcon,
+    title: "邮客行",
     detail:
-      "今日头条是一个通用信息平台，致力于连接人与信息，让优质丰富的信息得到高效精准的分发，帮助用户看见更大的世界。今日头条目前拥有推荐引擎、搜索引擎、关注订阅和内容运营等多种分发方式，囊括图文、视频、问答、微头条、专栏、小说、直播、音频和小程序等多种内容体裁，并涵盖科技、体育、健康、美食、教育、三农、国风等超过100个内容领域。",
+      "“邮客行｜南邮访客登记”小程序是一款线上入校访客登记系统。疫情防控形势较为严峻复杂，来校访客登记需纳入高校常规化管理范畴。“邮客行”联合企业微信和微信两个平台，实现了入校访客在微信端申请，校内管理人员在企业微信端审批的功能。",
     bgUrl:
-      "https://p9-bd-official.byteimg.com/img/bytedance-cn/dd665e447cd09c339875f9580a5478bd~noop.image",
-  },
-  {
-    iconUrl:
-      "https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image",
-    title: "今日头条",
-    detail:
-      "今日头条是一个通用信息平台，致力于连接人与信息，让优质丰富的信息得到高效精准的分发，帮助用户看见更大的世界。今日头条目前拥有推荐引擎、搜索引擎、关注订阅和内容运营等多种分发方式，囊括图文、视频、问答、微头条、专栏、小说、直播、音频和小程序等多种内容体裁，并涵盖科技、体育、健康、美食、教育、三农、国风等超过100个内容领域。",
-    bgUrl:
-      "https://p9-bd-official.byteimg.com/img/bytedance-cn/dd665e447cd09c339875f9580a5478bd~noop.image",
-  },
-  {
-    iconUrl:
-      "https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image",
-    title: "今日头条",
-    detail:
-      "今日头条是一个通用信息平台，致力于连接人与信息，让优质丰富的信息得到高效精准的分发，帮助用户看见更大的世界。今日头条目前拥有推荐引擎、搜索引擎、关注订阅和内容运营等多种分发方式，囊括图文、视频、问答、微头条、专栏、小说、直播、音频和小程序等多种内容体裁，并涵盖科技、体育、健康、美食、教育、三农、国风等超过100个内容领域。",
-    bgUrl:
-      "https://p9-bd-official.byteimg.com/img/bytedance-cn/dd665e447cd09c339875f9580a5478bd~noop.image",
-  },
-  {
-    iconUrl:
-      "https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image",
-    title: "今日头条",
-    detail:
-      "今日头条是一个通用信息平台，致力于连接人与信息，让优质丰富的信息得到高效精准的分发，帮助用户看见更大的世界。今日头条目前拥有推荐引擎、搜索引擎、关注订阅和内容运营等多种分发方式，囊括图文、视频、问答、微头条、专栏、小说、直播、音频和小程序等多种内容体裁，并涵盖科技、体育、健康、美食、教育、三农、国风等超过100个内容领域。",
-    bgUrl:
-      "https://p9-bd-official.byteimg.com/img/bytedance-cn/dd665e447cd09c339875f9580a5478bd~noop.image",
-  },
-  {
-    iconUrl:
-      "https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image",
-    title: "今日头条",
-    detail:
-      "今日头条是一个通用信息平台，致力于连接人与信息，让优质丰富的信息得到高效精准的分发，帮助用户看见更大的世界。今日头条目前拥有推荐引擎、搜索引擎、关注订阅和内容运营等多种分发方式，囊括图文、视频、问答、微头条、专栏、小说、直播、音频和小程序等多种内容体裁，并涵盖科技、体育、健康、美食、教育、三农、国风等超过100个内容领域。",
-    bgUrl:
-      "https://p9-bd-official.byteimg.com/img/bytedance-cn/dd665e447cd09c339875f9580a5478bd~noop.image",
+      youkexingBackground,
+    mockUrl: youkexingMock,
+    qrCode: youkexingCode,
   },
 ];
+
 interface ProductProp {
   isMobile: boolean;
 }
@@ -72,6 +45,8 @@ function Product(props: ProductProp) {
                 bgUrl={value.bgUrl}
                 title={value.title}
                 detail={value.detail}
+                mock={value.mockUrl}
+                qrCode={value.qrCode}
               ></ProductPart>
             );
           })}

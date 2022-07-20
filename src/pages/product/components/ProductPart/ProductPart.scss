@@ -6,15 +6,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   .product-part-msg {
-    margin: 120px 0px 0px 82px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-left: 90px;
     width: 310px;
-    height: 521px;
+    height: 100vh;
     .product-part-icon {
-      width: 60px;
-      height: 60px;
+      width: 72px;
+      height: 72px;
       // background-image: url("https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image");
       background-position: center;
       background-repeat: no-repeat;
@@ -40,5 +43,9 @@
       white-space: pre-wrap;
       line-height: 2;
     }
+  }
+  .product-part-mock {
+    height: 100vh;
+    margin-right: 20vw;
   }
 }
