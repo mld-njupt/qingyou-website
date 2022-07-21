@@ -17,10 +17,11 @@ interface SwiperProp {
   productIndicatorOptions?: Array<{ iconUrl: string }>;
   isMobile?: boolean;
   children: ReactElement | Array<ReactElement>;
+  indexControl?: any
 }
 const swiperContext = React.createContext<ContextProp>({
   selectedIndex: 0,
-  setSelectedIndex: () => {},
+  setSelectedIndex: () => { },
 });
 function IndicatorItem(props: {
   onClick: Function;
@@ -37,8 +38,8 @@ function IndicatorItem(props: {
             ? "product-indicator-item  product-selected-item"
             : "product-indicator-item"
           : selected
-          ? "indicator-item selected-item"
-          : "indicator-item"
+            ? "indicator-item selected-item"
+            : "indicator-item"
       }
       style={{ backgroundImage: `url(${bg})` }}
     ></div>
@@ -69,7 +70,7 @@ function MobileIndicator(props: {
   );
 }
 function Swiper(props: SwiperProp) {
-  const { children, isMobile, productIndicatorOptions } = props;
+  const { children, isMobile, productIndicatorOptions, indexControl } = props;
   const [selectedIndex, setSelectedIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemsCount = React.Children.count(children);
@@ -139,6 +140,10 @@ function Swiper(props: SwiperProp) {
       };
     }
   });
+  useEffect(() => {
+    console.log('index change to '+selectedIndex)
+    indexControl(selectedIndex)
+  }, [selectedIndex])
   return (
     <div className="swiper-wrap" ref={containerRef}>
       <swiperContext.Provider value={context}>
@@ -147,14 +152,14 @@ function Swiper(props: SwiperProp) {
           style={{
             transform: `translate3d(0px, -${100 * selectedIndex}vh, 0px)`,
           }}
-          // animate={{
-          //   y: `-${100 * selectedIndex}vh`,
-          //   transition: {
-          //     type: "spring",
-          //     stiffness: 300,
-          //     damping: 30,
-          //   },
-          // }}
+        // animate={{
+        //   y: `-${100 * selectedIndex}vh`,
+        //   transition: {
+        //     type: "spring",
+        //     stiffness: 300,
+        //     damping: 30,
+        //   },
+        // }}
         >
           {React.Children.map(children, (child) => {
             return React.cloneElement(child);

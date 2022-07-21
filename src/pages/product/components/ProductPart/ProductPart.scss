@@ -7,13 +7,18 @@
   background-size: cover;
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  .product-part-body {
+    width: 100vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
   .product-part-msg {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 90px;
-    width: 310px;
+    width: 340px;
     height: 100vh;
     .product-part-icon {
       width: 72px;
@@ -38,7 +43,7 @@
         "Helvetica", "Arial", sans-serif;
       width: 100%;
       margin-top: 24px;
-      height: 314px;
+      height: 250px;
       font-size: 16px;
       white-space: pre-wrap;
       line-height: 2;
@@ -46,6 +51,5 @@
   }
   .product-part-mock {
     height: 100vh;
-    margin-right: 20vw;
   }
 }

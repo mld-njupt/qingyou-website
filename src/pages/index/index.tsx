@@ -14,7 +14,7 @@ function Index(props: IndexProp) {
   const { isMobile } = props;
   return (
     <>
-      {/* {isMobile ? null : <Header isTransparent={true}></Header>} */}
+      {isMobile ? null : <Header isTransparent={true} bgColor='#000000'></Header>}
       {isMobile ? (
         <Swiper isMobile={true}>
           <MobilePart1></MobilePart1>
