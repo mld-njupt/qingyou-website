@@ -142,7 +142,7 @@ function Swiper(props: SwiperProp) {
   });
   useEffect(() => {
     console.log('index change to '+selectedIndex)
-    indexControl(selectedIndex)
+    indexControl&&indexControl(selectedIndex)
   }, [selectedIndex])
   return (
     <div className="swiper-wrap" ref={containerRef}>
