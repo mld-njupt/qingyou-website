@@ -7,8 +7,8 @@ interface HomeProp{
 }
 function Home(props:HomeProp) {
   return (
+    // {isMobile ? null : <Header isTransparent={true}></Header>}
     <div className="home-wrap">
-      {props.isMobile?<MobileHeader></MobileHeader>:<Header></Header>}
       <div
         style={{
           width: "100vw",

@@ -6,15 +6,23 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  .product-part-body {
+    width: 100vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
   .product-part-msg {
-    margin: 120px 0px 0px 82px;
     display: flex;
     flex-direction: column;
-    width: 310px;
-    height: 521px;
+    justify-content: center;
+    width: 340px;
+    height: 100vh;
     .product-part-icon {
-      width: 60px;
-      height: 60px;
+      width: 72px;
+      height: 72px;
       // background-image: url("https://p6-bd-official.byteimg.com/img/bytedance-cn/4ac74bbefc4455d0b350fff1fcd530c7~noop.image");
       background-position: center;
       background-repeat: no-repeat;
@@ -35,10 +43,13 @@
         "Helvetica", "Arial", sans-serif;
       width: 100%;
       margin-top: 24px;
-      height: 314px;
+      height: 250px;
       font-size: 16px;
       white-space: pre-wrap;
       line-height: 2;
     }
+  }
+  .product-part-mock {
+    height: 100vh;
   }
 }
