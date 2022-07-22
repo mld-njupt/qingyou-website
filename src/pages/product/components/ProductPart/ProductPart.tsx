@@ -40,7 +40,7 @@ function ProductPart(props: PartProp) {
           ></div>
           <div className="product-part-title">{title}</div>
           <p className="product-part-detail">{detail}</p>
-          <ProductQrCode />
+          {/* <ProductQrCode /> */}
         </div>
         <div className="product-part-mock"><img src={mock} alt="mock" height='100%' /></div>
       </div>
